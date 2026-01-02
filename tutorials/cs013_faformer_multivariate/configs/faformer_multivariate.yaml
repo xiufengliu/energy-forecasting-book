@@ -1,0 +1,22 @@
+# FAformer Multivariate Forecasting Configuration
+# Reproduces Chapter 7 results
+
+n_samples: 8760
+lookback: 168
+horizon: 24
+seed: 42
+num_features: 3  # load, price, temperature
+
+# FAformer architecture
+d_model: 64
+nhead: 4
+num_layers: 2
+dropout: 0.1
+
+# Training
+batch_size: 32
+learning_rate: 0.001
+epochs: 100
+patience: 10
+
+# Expected: Superior performance on correlated multivariate series

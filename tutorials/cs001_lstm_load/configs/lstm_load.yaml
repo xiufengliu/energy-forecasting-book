@@ -1,0 +1,22 @@
+# LSTM Load Forecasting Configuration
+# Reproduces Chapter 3 results
+
+# Data settings
+n_samples: 8760  # 1 year of hourly data
+lookback: 168    # 7 days of history
+horizon: 24      # 24-hour ahead forecast
+seed: 42
+
+# Model architecture
+hidden_size: 64
+num_layers: 2
+dropout: 0.2
+
+# Training settings
+batch_size: 32
+learning_rate: 0.001
+epochs: 100
+patience: 10
+grad_clip: 1.0
+
+# Expected performance: WAPE 2.5% - 4.0%

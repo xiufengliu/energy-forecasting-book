@@ -1,0 +1,21 @@
+# Seq2Seq Wind Power Forecasting Configuration
+# Reproduces Chapter 4 results
+
+n_samples: 8760
+lookback: 168
+horizon: 24
+seed: 42
+
+# Seq2Seq architecture
+hidden_size: 64
+num_layers: 2
+dropout: 0.2
+
+# Training
+batch_size: 32
+learning_rate: 0.001
+epochs: 100
+patience: 10
+grad_clip: 1.0
+
+# Expected performance: WAPE 12% - 18%

@@ -1,0 +1,21 @@
+# Hyperparameter Tuning Configuration
+# Reproduces Chapter 11 results
+
+n_samples: 4380  # 6 months for faster tuning
+lookback: 168
+horizon: 24
+seed: 42
+
+# Base training settings
+batch_size: 32
+epochs: 30
+patience: 5
+
+# Hyperparameter search space
+param_grid:
+  hidden_size: [32, 64, 128]
+  num_layers: [1, 2]
+  learning_rate: [0.001, 0.0005]
+  dropout: [0.1, 0.2]
+
+# Expected: 5-10% improvement through systematic optimization
